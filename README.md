@@ -1,2 +1,5 @@
-# DataScienceCapstoneProject
-The objective of this capstone project is to build a Shiny app to allow a user to enter a phrase and have the application predict what the next word will be.
+Data Science Capstone Project - Specialisation by Johns Hopkins University
+
+Welcome to my Github Repo for the Coursera Data Science Specialization Capstone Project. You can find my final submissions by following the links below:
+* Shiny App: https://halici.shinyapps.io/DS-Capstone-Project/ 
+* Presentation: 
