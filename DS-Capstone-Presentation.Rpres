@@ -1,0 +1,128 @@
+<style>
+
+/* slide titles */
+.section .reveal .state-background {
+background: white;
+}
+.section .reveal p {
+font-family: Palatino Linotype;
+color: rgb(57, 64, 71);
+text-align:right; width:100%;
+line-height: 0.1em;
+#margin-top: 70px;
+}
+.section .reveal h1, .section .reveal h2, .section {
+font-family: Palatino Linotype;
+color: rgb(8, 38, 73);
+margin-top: 50px;
+}
+.reveal pre code {
+	font-family: Palatino Linotype;
+  background-color: white;
+  color: rgb(6, 114, 91);
+  font-size: 30px;
+  font-weight: bold
+  #position: fixed; top: 90%;
+  #text-align:center; width:100%;
+  }
+.reveal h3 { 
+  font-size: 65px;
+  color: rgb(57, 64, 71)  ;
+}
+
+/* heading for slides with two hashes ## */
+.reveal .slides section .slideContent h2 {
+   font-family: Palatino Linotype;
+   font-size: 37px;;
+   color: rgb(57, 64, 71);
+}
+
+/* ordered and unordered list styles */
+.reveal ul, 
+.reveal ol {
+    font-family: Palatino Linotype;
+    font-size: 34px;
+    color: rgb(57, 64, 71);
+    list-style-type: square;
+  
+  .reveal h1, .reveal h2, .reveal h3 {
+  word-wrap: normal;
+  -moz-hyphens: none;
+  }
+
+</style>
+
+Capstone: Predict Next Word
+========================================================
+font-family: 'palatino linotype'
+transition: rotate
+
+
+                            NLP SwiftKey Word Prediction
+                         Coursera/Johns Hopkins University 
+                                 Data Science Specialization
+        
+
+N.Halici  
+
+December 19, 2019
+
+![caption](logos.png)
+
+Overview
+========================================================
+The objective of this capstone project is to build a Shiny app to allow a user to enter a phrase and have the application predict what the next word will be.
+
+Input for this project was provide as text data from twitter, blogs and news feeds. An exploratory data analysis phase was completed. The data was sampled and cleaned by converting the data to all lowercase and removing puncuation, white space, numbers and special character (such as quotes and hyphens).
+
+Models
+========================================================
+Once the sample data was prepared, a predictive model was built to estimate the next word to be typed for any phrase.
+
+The data from the three input sources was combined to create a single Corpus. The corpus was tokenized into a series of the most common n-grams of 1, 2, 3 and 4 word phrases (unigram, bi-gram, tri-gram and quad-gram).
+
+A backoff model strategy was then employed to try to match a users input to common 4 word phrases. If not found, the model would backoff and look for similar 3 words phrases, and then 2 words phrases.
+
+Finally, a shiny application was then built to allow reviewers to test the project code.
+
+
+The Application - I
+========================================================
+
+The app is made as straight forward as possible. The user can enter a word or multiple words in the input field for which the next word is to be predicted. The app can be access via this link: (https://halici.shinyapps.io/DS-Capstone-Project/) 
+
+Simply start typing on the text field and up to 4 possible next words will automatically display below the field. Each predicted word is clickable and clicking on the desired word will add it to your phrase and predict the next word.
+
+The Application - II
+========================================================
+
+Prediction tab (default) displays the predicted next word. About tab, describes the app. 
+
+![Screenshot of Application](app.png)
+
+
+Resources
+========================================================
+
+Shiny app: 
+(https://halici.shinyapps.io/DS-Capstone-Project/)
+
+Source code:
+(https://github.com/nihathalici/DataScienceCapstoneProject)
+
+Presentation:
+(http://rpubs.com/nihathalici/DS-Capstone-Predict-Next-Word-Project-Presentation)
+
+References
+========================================================
+
+- [Katz's Back-off Model, Wikipedia](https://en.wikipedia.org/wiki/Katz%27s_back-off_model)
+- [Speech and Language Processing,Jurafsky and Martin](https://lagunita.stanford.edu/c4x/Engineering/CS-224N/asset/slp4.pdf)
+- [Coursera course on NLP](https://www.coursera.org/course/nlp)
+- [Text Mining Infrastructure in R](http://www.jstatsoft.org/v25/i05/)
+- [Basic Text Mining in R](https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html)
+- [tm Package in R](https://cran.r-project.org/web/packages/tm/tm.pdf)
+- [Shiny Tutorial](http://shiny.rstudio.com/tutorial/)
+- [N-Grams](https://en.wikipedia.org/wiki/N-gram)
+
+
